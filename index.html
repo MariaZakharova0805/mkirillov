@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/61795b381c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gantari:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="mystyle.css" />
+
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 988px)"
+      href="mobile.css"
+    />
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <div class="header">
+      <div class="dropdown menu">
+        <i class="dropbtn fa-solid fa-bars" id="dropbtn"></i>
+        <div class="dropdown-content menuline hidden" id="menuline">
+          <a href="index.html" class="chosen">HOME</a>
+          <a href="portraits.html">PORTRAITS</a>
+          <a href="food.html">FOOD</a>
+          <a href="video.html">VIDEO</a>
+          <a href="contact.html">CONTACT</a>
+        </div>
+      </div>
+
+      <div class="logo">
+        <img class="logo" src="img/logo.jpg" />
+      </div>
+    </div>
+
+    <!-- //CARD -->
+    <div class="mainpic">
+      <div class="whitesquare">
+        <h1>MIKHAIL KIRILLOV</h1>
+        <p>PHOTOGRAPHER</p>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="social">
+      <a href="https://www.facebook.com/mike.kirillov.91/"
+        ><i class="fa-brands fa-facebook-square"> </i
+      ></a>
+
+      <a href="https://www.instagram.com/mihail_kirillov_/"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+
+      <a href="https://t.me/mkirillovph"
+        ><i class="fa-brands fa-telegram"></i
+      ></a>
+
+      <a href="https://500px.com/p/mkirillov_ph?view=photos"
+        ><i class="fa-brands fa-500px"></i
+      ></a>
+      <footer class="mail">
+        <p><i class="fa-solid fa-at"></i> cmaptc@gmail.com</p>
+      </footer>
+    </div>
+    <footer class="footer">
+      <p><i class="fa-solid fa-copyright"></i> Copyright Mikhail Kirillov</p>
+      <hr />
+      <div class="signature">
+        website made by <i class="fa-solid fa-copyright"></i> Maria Zakharova
+        <a href="https://t.me/Maria_Zakharova_V"
+          ><i class="fa-brands fa-telegram"></i
+        ></a>
+        <a href="https://wa.me/79162869949"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+        <a href="mailto:fraumaria2011@yandex.ru"
+          ><i class="fa-solid fa-at"></i
+        ></a>
+      </div>
+    </footer>
+    <br />
+    <!-- FOOTER -->
+
+    <script>
+      // preloader
+      document.body.onload = function () {
+        setTimeout(function () {
+          let preloader = document.getElementById("preloader");
+          if (!preloader.classList.contains("done")) {
+            preloader.classList.add("done");
+          }
+        }, 1000);
+      };
+
+      // drop menu for moblie
+      dropbtn.addEventListener("click", function () {
+        menuline.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

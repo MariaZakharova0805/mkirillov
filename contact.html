@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/61795b381c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gantari:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="mystyle.css" />
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 988px)"
+      href="mobile.css"
+    />
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+    <div class="header">
+      <div class="dropdown menu">
+        <i class="dropbtn fa-solid fa-bars" id="dropbtn"></i>
+        <div class="dropdown-content menuline hidden" id="menuline">
+          <a href="index.html"><p class="chosen">HOME</p></a>
+          <a href="portraits.html"><p>PORTRAITS</p></a>
+          <a href="food.html"><p>FOOD</p></a>
+          <a href="video.html"><p>VIDEO</p></a>
+          <a href="contact.html"><p>CONTACT</p></a>
+        </div>
+      </div>
+
+      <div class="logo">
+        <img class="logo" src="img/logo.jpg" />
+      </div>
+    </div>
+
+    <!-- //CARD -->
+
+    <div class="about">
+      <div class="myimage"><img src="img/selfportrait.jpg" alt="" /></div>
+      <div class="textabout">
+        <h3>MIKHAIL KIRILLOV</h3>
+        <p>
+          Photographer and videographer. Now I live and shoot in Armenia. I like
+          taking delicious pictures of delicious food, nice people. I enjoy
+          communication, traveling and petting cats. I hope to see you soon
+          through the lens of my camera. Peace to the world!
+        </p>
+        <div class="contactbox">
+          <div class="left">
+            <h3>CONTACT</h3>
+            <div class="small">
+              <p>
+                <a href="https://www.facebook.com/mike.kirillov.91/"
+                  ><i class="fa-brands fa-facebook-square"> </i
+                ></a>
+
+                <a href="https://www.instagram.com/mihail_kirillov_/"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+
+                <a href="https://t.me/mkirillovph"
+                  ><i class="fa-brands fa-telegram"></i
+                ></a>
+
+                <a href="mailto:cmaptc@gmail.com"
+                  ><i class="fa-solid fa-at"></i
+                ></a>
+
+                <a href="https://500px.com/p/mkirillov_ph?view=photos"
+                  ><i class="fa-brands fa-500px"></i
+                ></a>
+              </p>
+              <p>cmaptc@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="right">
+            <img src="img/qr_tmp.svg" alt="telegram" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- //social -->
+
+    <footer class="footer">
+      <p><i class="fa-solid fa-copyright"></i> Copyright Mikhail Kirillov</p>
+
+      <p class="signature">
+        website made by <i class="fa-solid fa-copyright"></i> Maria Zakharova
+        <a href="https://t.me/Maria_Zakharova_V"
+          ><i class="fa-brands fa-telegram"></i
+        ></a>
+        <a href="https://wa.me/79162869949"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+        <a href="mailto:fraumaria2011@yandex.ru"
+          ><i class="fa-solid fa-at"></i
+        ></a>
+      </p>
+    </footer>
+    <br />
+    <script>
+      // preloader
+      document.body.onload = function () {
+        setTimeout(function () {
+          let preloader = document.getElementById("preloader");
+          if (!preloader.classList.contains("done")) {
+            preloader.classList.add("done");
+          }
+        }, 1000);
+      };
+
+      //dropdownmenu
+      dropbtn.addEventListener("click", function () {
+        menuline.classList.toggle("hidden");
+      });
+      document.oncontextmenu = new Function("return false");
+    </script>
+  </body>
+</html>

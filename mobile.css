@@ -1,0 +1,225 @@
+:root {
+  --color1: rgb(0, 0, 0);
+  --color2: rgb(255, 255, 255);
+  --color3: rgb(164, 164, 164);
+  --color4: rgba(79, 79, 79, 0.92);
+}
+a {
+  text-decoration: none;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", "Arial";
+  color: black;
+  font-family: "Gantari", sans-serif;
+}
+/* TOP MENU */
+.header {
+  height: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.logo {
+  width: 80%;
+  height: auto;
+  text-align: center;
+  padding-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 650px) {
+  .logo {
+    width: 60%;
+    height: auto;
+    text-align: center;
+    padding: 0px;
+  }
+}
+
+/* Кнопка выпадающего списка */
+.dropbtn {
+  font-size: 30px;
+  color: var(--color1);
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid var(--color1);
+  margin-top: 20px;
+}
+.menu {
+  padding: 0px;
+  width: 50%;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+/* Контейнер для размещения выпадающего содержимого */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Выпадающее содержимое */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 150px;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+.dropdown-content a:active {
+  outline: none;
+}
+
+
+/*CARD*/
+.mainpic {
+  background-image: url(img/mainSM.jpg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.whitesquare {
+  width: 80%;
+  height: 20%;
+  border: 1px solid var(--color2);
+  text-align: center;
+  margin: 0px;
+  color: var(--color2);
+  margin-left: 10%;
+}
+.whitesquare h1 {
+  font-size: 18px;
+  padding-top: 20px;
+  letter-spacing: 6px;
+}
+
+.whitesquare p {
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+/*FOOTER*/
+
+.social {
+  color: var(--color3);
+  font-size: 20px;
+  text-align: center;
+}
+
+.social a {
+  text-decoration: none;
+  color: var(--color3);
+}
+
+.social a:hover {
+  text-decoration: none;
+  color: var(--color4);
+}
+.footer {
+  line-height: 0px;
+  height: 30px;
+  font-size: 15px;
+  color: var(--color3);
+}
+
+/*IMAGES FOOD*/
+.full-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: auto;
+}
+
+/* PORTRAITS */
+.portraits {
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(17, auto);
+  inline-size: 90%;
+  grid-gap: 5px;
+  margin-left: 2%;
+}
+/*CONTACT PAGE*/
+
+.about {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+}
+.myimage {
+  width: 100%;
+}
+
+.textabout {
+  width: 100%;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textabout p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.contactbox {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/*STREET*/
+.calm img {
+  width: 100%;
+  height: auto;
+}
+
+/* sledrbox */
+
+.sliderBox img {
+  width: 95%;
+  height: auto;
+  max-width: fit-content;
+  max-height: fit-content;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navigation {
+  width: 40%;
+}
+
+.signature {
+  font-size: 10px;
+}
+
+.about {
+  margin: 0%;
+  margin-left: auto;
+  margin-right: auto;
+}

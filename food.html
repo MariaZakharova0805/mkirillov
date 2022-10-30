@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/61795b381c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gantari:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="mystyle.css" />
+
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 988px)"
+      href="mobile.css"
+    />
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+    <div class="header">
+      <div class="dropdown menu">
+        <i class="dropbtn fa-solid fa-bars" id="dropbtn"></i>
+        <div class="dropdown-content menuline hidden" id="menuline">
+          <a href="index.html"><p class="chosen">HOME</p></a>
+          <a href="portraits.html"><p>PORTRAITS</p></a>
+          <a href="food.html"><p>FOOD</p></a>
+          <a href="video.html"><p>VIDEO</p></a>
+          <a href="contact.html"><p>CONTACT</p></a>
+        </div>
+      </div>
+
+      <div class="logo">
+        <img class="logo" src="img/logo.jpg" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="itemfood item_1" data-num="1">
+        <img src="food/1.jpg" alt="" />
+      </div>
+      <div class="itemfood item_2" data-num="2">
+        <img src="food/2.jpg" alt="" />
+      </div>
+      <div class="itemfood item_3" data-num="3">
+        <img src="food/3.jpg" alt="" />
+      </div>
+      <div class="itemfood item_4" data-num="4">
+        <img src="food/4.jpg" alt="" />
+      </div>
+      <div class="itemfood item_5" data-num="5">
+        <img src="food/5.jpg" alt="" />
+      </div>
+    </div>
+    <!-- popup -->
+
+    <div class="sliderBox closedPop">
+      <img id="showIMG" src="food/1.jpg" alt="" />
+      <div class="navigation">
+        <i class="fa-solid fa-angle-left" id="back"></i>
+        <i class="fa-solid fa-xmark" id="exit"></i>
+        <i class="fa-solid fa-angle-right" id="forward"></i>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="social">
+      <a href="https://www.facebook.com/mike.kirillov.91/"
+        ><i class="fa-brands fa-facebook-square"> </i
+      ></a>
+
+      <a href="https://www.instagram.com/mihail_kirillov_/"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+
+      <a href="https://t.me/mkirillovph"
+        ><i class="fa-brands fa-telegram"></i
+      ></a>
+
+      <a href="https://500px.com/p/mkirillov_ph?view=photos"
+        ><i class="fa-brands fa-500px"></i
+      ></a>
+      <footer class="mail">
+        <p><i class="fa-solid fa-at"></i> cmaptc@gmail.com</p>
+      </footer>
+    </div>
+    <footer class="footer">
+      <p><i class="fa-solid fa-copyright"></i> Copyright Mikhail Kirillov</p>
+      <hr />
+      <p class="signature">
+        website made by <i class="fa-solid fa-copyright"></i> Maria Zakharova
+        <a href="https://t.me/Maria_Zakharova_V"
+          ><i class="fa-brands fa-telegram"></i
+        ></a>
+        <a href="https://wa.me/79162869949"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+        <a href="mailto:fraumaria2011@yandex.ru"
+          ><i class="fa-solid fa-at"></i
+        ></a>
+      </p>
+    </footer>
+
+    <!-- FOOTER -->
+
+    <script>
+      // preloader
+      document.body.onload = function () {
+        setTimeout(function () {
+          let preloader = document.getElementById("preloader");
+          if (!preloader.classList.contains("done")) {
+            preloader.classList.add("done");
+          }
+        }, 1000);
+      };
+
+      let container = document.querySelector(".container");
+      let images = document.querySelectorAll(".itemfood"); //основная галлерея
+      let showIMG = document.querySelector("#showIMG");
+      let sliderBox = document.querySelector(".sliderBox");
+      let exit = document.querySelector("#exit");
+      let back = document.querySelector("#back");
+      let forward = document.querySelector("#forward");
+
+      let number;
+
+      for (let image of images) {
+        image.addEventListener("click", function () {
+          number = this.dataset.num;
+          showIMG.setAttribute("src", `food/${number}.jpg`);
+          container.classList.add("closedPop");
+          sliderBox.classList.remove("closedPop");
+        });
+      }
+
+      back.addEventListener("click", function () {
+        goBAck();
+      });
+
+      forward.addEventListener("click", function () {
+        goForward();
+      });
+
+      exit.addEventListener("click", function () {
+        exitGallery();
+      });
+
+      showIMG.parentElement.addEventListener("click", function (e) {
+        if (e.target == e.currentTarget) {
+          number = this.dataset.num;
+          exitGallery();
+        }
+      });
+
+      function exitGallery() {
+        container.classList.remove("closedPop");
+        sliderBox.classList.add("closedPop");
+      }
+
+      function goBAck() {
+        if (number == 1) {
+          number = 7;
+          number--;
+          showIMG.setAttribute("src", `food/${number}.jpg`);
+        }
+        if (number > 1 && number < 7) {
+          number--;
+          showIMG.setAttribute("src", `food/${number}.jpg`);
+        }
+      }
+
+      function goForward() {
+        if (number == 5) {
+          number = 1;
+          number++;
+          showIMG.setAttribute("src", `food/${number}.jpg`);
+        }
+        if (number > 0 && number < 5) {
+          number++;
+          showIMG.setAttribute("src", `food/${number}.jpg`);
+        }
+      }
+
+      //переключение фото стрелками
+      document.onkeydown = function (event) {
+        event = event || window.event;
+
+        var keyCode = "keyCode" in event ? event.keyCode : event.which;
+
+        switch (keyCode) {
+          case 37:
+            goForward();
+            // console.log("37 was pressed", event);
+            break;
+          case 39:
+            goBAck();
+            break;
+
+          case 27:
+            exitGallery();
+            break;
+        }
+      };
+
+      //dropdownmenu
+      dropbtn.addEventListener("click", function () {
+        menuline.classList.toggle("hidden");
+      });
+      document.oncontextmenu = new Function("return false");
+    </script>
+  </body>
+</html>
