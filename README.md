@@ -1,5 +1,5 @@
-# Website for a photographer
-- Build by using JS, HTML, CSS
+# Website for a photographer :camera:
+- Build by using pure JS, HTML, CSS
 - There are versions for mobile devices and computers. 
 ___
 [Check the site here](https://mariazakharova0805.github.io/mkirillov.github.io/index.html)
