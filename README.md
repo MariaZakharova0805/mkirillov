@@ -1,8 +1,9 @@
 # MKirillov
-<a href="https://tattoo-ten.vercel.app/" target="_blank">![Project illustartion](https://github.com/MariaZakharova0805/mkirillov/raw/main/screenshot.jpg)</a>
+<a href="https://mariazakharova0805.github.io/mkirillov/" target="_blank">![Project illustartion](https://github.com/MariaZakharova0805/mkirillov/raw/main/screenshot.jpg)</a>
 Photographer's portfolio website
 
 ## Deploy
+Published on GitPages
 <a href="https://mariazakharova0805.github.io/mkirillov/">деплой<a/>
 
 ## Technologies
