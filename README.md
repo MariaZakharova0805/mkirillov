@@ -4,13 +4,13 @@ Photographer's portfolio website
 
 ## Deploy
 Published on GitPages
-<a href="https://mariazakharova0805.github.io/mkirillov/">деплой<a/>
+<a href="https://mariazakharova0805.github.io/mkirillov/">mkirillov.com<a/>
 
 ## Technologies
 - Vanilla JS
 - CSS
 
-### Project setup
+## Project setup
 ```sh
 $ npm i
 ```
