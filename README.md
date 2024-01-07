@@ -16,4 +16,4 @@ $ npm i
 ```
 
 ## Design
-Site design done by <a href="https://500px.com/p/mkirillov_ph?view=photos" target="_blank">Mikhail Kirillov</a> 
+Website design done by <a href="https://500px.com/p/mkirillov_ph?view=photos" target="_blank">Mikhail Kirillov</a> 
